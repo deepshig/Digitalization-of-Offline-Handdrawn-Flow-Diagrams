@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Hand Drawn Shape Detection</title>
+ 
+    <!-- CSS files-->
+    <link rel="shortcut icon" href="http://publicdomainvectors.org/photos/ernes_mano_con_penna_-_hand_and_pen.png">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ 
+</head>
+
+<!-- Body with background -->
+<body background="http://theesteps.com/wp-content/uploads/2015/01/clean-white-polygon-backgrounds-101.jpg">
+ 
+            <div class="header">
+                <h2 class="text-muted"><center>Hand Drawn Shape Detection</center></h2>
+            </div>
+
+            <div class="row marketing">
+
+                <div class="col-lg-1">
+                </div>
+
+                <div class="col-lg-4">
+                    <h4>Input Image</h4>
+                    {% if input_image %}
+                      {{ input_image }}
+                    {% else %}
+                      <h1>No Image!</h1>
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-1">
+                </div>
+
+                <div class="col-lg-5">
+                    <h4>Corner Removed Image</h4>
+                    {% if corner_image %}
+                      {{ corner_image }}
+                    {% else %}
+                      <h1>No Image!</h1>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row marketing">
+
+                <div class="col-lg-1">
+                </div>
+
+                <div class="col-lg-4">
+                    <h4>Closed Figure Image</h4>
+                    {% if closed_image %}
+                      {{ closed_image }}
+                    {% else %}
+                      <h1>No Image!</h1>
+                    {% endif %}
+                </div>
+
+                <div class="col-lg-1">
+                </div>
+
+                <div class="col-lg-5">
+                    <h4>Rendered Image</h4>
+                    {% if final_image %}
+                      {{ final_image }}
+                    {% else %}
+                      <h1>No Image!</h1>
+                    {% endif %}
+                </div>
+            </div>
+
+</body>
+ 
+</html>

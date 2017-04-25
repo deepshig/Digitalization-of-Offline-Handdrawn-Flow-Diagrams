@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Hand Drawn Shape Detection</title>
+ 
+    <!-- -->
+    <!-- CSS files -->
+    <link rel="shortcut icon" href="http://publicdomainvectors.org/photos/ernes_mano_con_penna_-_hand_and_pen.png">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+ 
+</head>
+
+<!-- Body with background -->
+<body background="http://theesteps.com/wp-content/uploads/2015/01/clean-white-polygon-backgrounds-101.jpg">
+ 
+    <div class="container">
+        <div class="header">
+            <br><br><h2 class="text-muted">Hand Drawn Shape Detection</h2>
+        </div>
+
+        <div class="row">
+
+                <div class="col-lg-4">
+                    <h3>Select your Image</h3><br>
+                    <form id="form1" action="upload" method="post" enctype="multipart/form-data" runat="server">
+                        <input type="file" name="file" class="btn btn-default" id="profile-img" accept="image/jpeg" /><br />
+                        <img src="" id="profile-img-tag" width="430px" /><br />
+                        <br />
+                        <input type="submit" class="btn btn-primary" value="Upload" />
+                    </form>
+                </div>
+
+                <div class="col-lg-6">
+                </div>
+
+        </div>
+            
+    </div>
+</body>
+
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#profile-img-tag').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#profile-img").change(function(){
+        readURL(this);
+    });
+</script>
+ 
+</html>
